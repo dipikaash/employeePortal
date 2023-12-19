@@ -50,7 +50,7 @@
         </tr>
     </thead>
     <tbody class="datatable-body">
-        <tr *ngFor="let row of employeeData">
+        <tr *ngFor="let row of employeeData" (click)="openModal(row)">
             <td>{{row.name}}</td>
             <td>{{row.empId}}</td>
             <td>{{row.DOJ}}</td>
@@ -59,3 +59,42 @@
     </tbody>
 </table>
 </div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Employee Details</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()"></button>
+        </div>
+
+        <div class="modal-body">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>{{selectedEmployee?.name}}</td>
+                </tr>
+                <tr>
+                    <td>Employee Id</td>
+                    <td>{{selectedEmployee?.empId}}</td>
+                </tr>
+                <tr>
+                    <td>Date of Joining</td>
+                    <td>{{selectedEmployee?.DOJ}}</td>
+                </tr>
+                <tr>
+                    <td>Seat Number</td>
+                    <td><input id="seat" type="text" value="{{selectedEmployee?.seat}}" [(ngModel)]="newSeat" /></td>
+                </tr>
+            </table>
+            <button class="btn btn-primary" (click)="onUpdate()">Update</button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

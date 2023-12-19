@@ -16,6 +16,8 @@ export class EmployeesComponent {
               employeeData: Array<any>=[];
               searchText: string = '';
               displayedColumns: string[] = ['Name', 'Employee ID', 'Date of Joining', 'Seat'];
+              selectedEmployee: any;
+              newSeat: any;
              // dataSource = new MatTableDataSource<User>(this.employeeData);
             
          //     @ViewChild(MatSort) sort!: MatSort;
@@ -31,5 +33,26 @@ export class EmployeesComponent {
   }
   logout() {
     this.authenticationService.logout();
+}
+openModal(item: any){
+  this.selectedEmployee = item;
+  const modalDiv= document.getElementById('myModal');
+    if(modalDiv!==null){
+      modalDiv.style.display = 'block';
+    }
+}
+closeModal(){
+  const modalDiv= document.getElementById('myModal');
+  if(modalDiv!==null){
+    modalDiv.style.display = 'none';
+  }
+}
+onUpdate(){
+  this.employeeData.map((item)=>{
+    if(item == this.selectedEmployee){
+      item.seat = this.newSeat;
+      this.closeModal();
+    } 
+  })
 }
 }
