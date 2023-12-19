@@ -1,0 +1,65 @@
+{
+    "empList": [
+      {
+        "name": "Muralidhar Reddy Gajjala",
+        "email": "gmuralidhar.reddy@happiestminds.com",
+        "password": "Hminds1234",
+        "isAdmin": true
+      },
+      {
+        "name": "Chandrasekhar N",
+        "email": "chandrashekhara.n@happiestminds.com",
+        "password": "Hminds1233",
+        "isAdmin": false
+      },
+      {
+        "name": "test",
+        "email": "test@hm.com",
+        "password":"Hminds1111",
+        "isAdmin": true
+      }
+    ],
+    "empsDetails": [
+      {
+        "name": "Abhijeet",
+        "empId": "HM0009812",
+        "DOJ": "2023-08-02",
+        "seat": "4F-A-120"
+      },
+      {
+        "name": "Shashikant",
+        "empId": "HM0004321",
+        "DOJ": "2023-08-04",
+        "seat": "4F-A-12"
+      },
+      {
+        "name": "Amrutha",
+        "empId": "HM0004941",
+        "DOJ": "2023-08-06",
+        "seat": "3F-B-23"
+      },
+      {
+        "name": "Dimple",
+        "empId": "HM0008631",
+        "DOJ": "2023-06-03",
+        "seat": "2F-A-45"
+      },
+      {
+        "name": "Bala",
+        "empId": "HM0020452",
+        "DOJ": "2023-05-20",
+        "seat": "2F-B-75"
+      },
+      {
+        "name": "Tara",
+        "empId": "HM0020872",
+        "DOJ": "2023-03-12",
+        "seat": "4F-B-75"
+      },      {
+        "name": "Tripti",
+        "empId": "HM0023543",
+        "DOJ": "2023-07-15",
+        "seat": "3F-A-23"
+      }
+    ]
+  }
