@@ -5,3 +5,12 @@ table {
   th.mat-sort-header-sorted {
     color: black;
   }
+  .table-edge{
+    border-radius: 5px !important;
+    overflow: hidden;
+  }
+  tr {
+    line-height: 35px;
+    min-height: 35px;
+    height: 35px;
+    }
